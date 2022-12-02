@@ -16,8 +16,11 @@ def max_calorie_elf(list):
     return max_elf
 
 def main():
-    print("placeholder")
+    input = open('Day1\input.txt','r')
+    elven_calories = input.read()
+    input.close()
+    max_elf = max_calorie_elf(elven_calories)
+    print("Elf with most calories found: {}".format(max_elf))
 
 if __name__ == "__main__":
-
     main()   
