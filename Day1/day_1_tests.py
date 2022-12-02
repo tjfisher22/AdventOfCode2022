@@ -29,13 +29,13 @@ class test_calorie_count(unittest.TestCase):
 class test_sorted_elven_calories(unittest.TestCase):
 
     def test_one_elf(self):
-        self.assertEqual(sorted_elven_calories('100\n200')[0], 300)
+        self.assertEqual(sorted_elven_calories('100\n200'), [300])
     
     def test_two_elf(self):
-        self.assertEqual(sorted_elven_calories('100\n200\n\n400')[1], 400)
+        self.assertEqual(sorted_elven_calories('100\n200\n\n400')[1], 300)
 
     def test_example_given(self):
-        self.assertEqual(sorted_elven_calories(example)[0], 6000)
+        self.assertEqual(sorted_elven_calories(example)[0], 24000)
 
 if __name__ == '__main__':
     unittest.main()
